@@ -59,7 +59,7 @@ It is low risk for UMA voters to return a value of 0.5, as it is likely that thi
 
 1. Voters should decode the ancillary data and identify the protocol, chain, start block, dollar value of claim in question and any additional resources provided.
 2. Because the protocol making the claim will likely be the party constructing the ancillary data and submitting a price request, voters should heavily rely on checking external resources for additional context. The Sherlock Coverage Terms Agreement should always be referenced. Additionally the Protocol's original claim as well as the Sherlock Claims Committee's original claims decision will likely always be published and should be referenced. Sherlock's Coverage Agreement details the exact types of exploits that Sherlock covers, and these should be the only exploits that are considered in arbitration. More information is provided in the `Additional Resources` section below.
-3. Voters should return a value of `1` if they determine that:
+3. Voters should return a value of the claim amount, exposed in the `ClaimCreated` event if they determine that:
    1. There was an exploit for the `Protocol` specified.
    2. The exploit type is covered by Sherlock's Coverage Agreement.
    3. The exploit happened as part of the `StartBlock` specified in ancillary data.
